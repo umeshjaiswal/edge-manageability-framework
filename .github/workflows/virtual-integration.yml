@@ -65,7 +65,7 @@ jobs:
         uses: actions/checkout@v4.2.1
 
       - name: Trivy (Filesystem)
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@0.32.0
         with:
           scan-type: "fs"
           scan-ref: "."
@@ -399,7 +399,7 @@ jobs:
           mage installer:bundle
 
       - name: Scan Cloud Installer Image
-        uses: aquasecurity/trivy-action@6c175e9c4083a92bbca2f9724c8a5e33bc2d97a5  # v0.30.0
+        uses: aquasecurity/trivy-action@77137e9dc3ab1b329b7c8a38c2eb7475850a14e8  # v0.30.0
         with:
           image-ref: 080137407410.dkr.ecr.us-west-2.amazonaws.com/edge-orch/common/orchestrator-installer-cloudfull:${{ env.versionTag }}
           format: table
